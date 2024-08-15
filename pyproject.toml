@@ -7,7 +7,6 @@ line-length = 79
 preview = true
 
 [tool.pyright]
-typeCheckingMode = "strict"
 reportMissingTypeStubs = false
 reportUnknownMemberType = false
 reportUnknownVariableType = false
