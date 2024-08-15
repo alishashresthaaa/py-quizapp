@@ -1,7 +1,23 @@
-{% extends header.html %}
+{% extends "header.html" %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    login form here
+    <section class="form__container">
+        <h1 class="form__header">Login</h1>
+        <p class="form__subheader">are you cultured enough?</p>
+        <form action="#">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+          </div>
+          {% endfor %}
+          <div class="btn-group">
+            <button type="submit" class="btn-primary">Login</button>
+            <p>Don't have an account? <a href="/register">Register</a></p>
+          </div>
+        </form>
+      </section>
 {% endblock %}

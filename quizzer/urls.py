@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.urls import path
 
-from core.forms import RegisterForm
+from core.forms import RegisterForm, LoginForm
 
 
 def index(request):
@@ -35,7 +35,13 @@ def register(request):
     return render(request, "register.html", {"form": form})
 
 def login(request):
-    return render(request, "login.html")
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            return render(request, "login.html", {"form": form})
+    else:
+        form = LoginForm()
+    return render(request, "login.html", {"form": form})
 
 urlpatterns = [
     path("admin/", admin.site.urls),
