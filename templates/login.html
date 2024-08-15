@@ -6,12 +6,17 @@
     <section class="form__container">
         <h1 class="form__header">Login</h1>
         <p class="form__subheader">are you cultured enough?</p>
-        <form action="#">
+        <form action="#" method="post">
           {% csrf_token %}
           {% for field in form %}
-          <div class="form-group">
+          <div class="form-group{% if field.errors %} form-group-error{% endif %}">
             <label for="{{ field.id_for_label }}">{{ field.label }}</label>
             {{ field }}
+            {% if field.errors %}
+            <div class="form-error">
+                {{ field.errors }}
+            </div>
+            {% endif %}
           </div>
           {% endfor %}
           <div class="btn-group">

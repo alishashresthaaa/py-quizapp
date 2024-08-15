@@ -5,13 +5,11 @@
   --color-primary-light: #838c6d;
   --color-primary-main: #666f50;
   --color-primary-dark: #414932;
-  --color-secondary-light: #474f36;
-  --color-secondary-main: #474f36;
-  --color-secondary-dark: #474f36;
   --color-dark: #1a2525;
   --color-light: #c2c7ac;
   --color-white: #fff;
   --color-black: #000;
+  --color-error: #ff0000;
   --border-radius: 3px;
 }
 
@@ -84,6 +82,12 @@ body {
   margin-bottom: 20px;
 }
 
+.form-group-error input,
+textarea,
+select{
+  border:2px solid var(--color-error);
+}
+
 label {
   font-size: 18px;
   color: var(--color-dark);
@@ -112,8 +116,7 @@ select option {
 
 .form__container {
   width: 600px;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 30px auto 0;
   @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0 20px;
@@ -141,4 +144,11 @@ select option {
   justify-content: left;
   align-items: flex-start;
   gap: 20px;
+}
+
+.form-error{
+  color: var(--color-error);
+  font-size: 16px;
+  margin-top: 4px;
+  font-weight: 500;
 }
