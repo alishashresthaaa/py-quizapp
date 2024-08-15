@@ -1,0 +1,55 @@
+{% extends "header.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+   <section class="form__container">
+        <h1 class="form__header">Register</h1>
+        <p class="form__subheader">Start the journey to become the unbeatable human!</p>
+        <form action="#">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+          </div>
+          {% endfor %}
+{#          <div class="form-group">#}
+{#            <label for="first-name">First Name</label>#}
+{#            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" />#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <label for="last-name">Last Name</label>#}
+{#            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" />#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <label for="username">Username</label>#}
+{#            <input type="text" id="username" name="username" placeholder="Enter your username" />#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <label for="gender">Gender</label>#}
+{#            <select id="gender" name="gender">#}
+{#              <option value="male">Male</option>#}
+{#              <option value="female">Female</option>#}
+{#              <option value="other">Other</option>#}
+{#            </select>#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <label for="email">Email</label>#}
+{#            <input type="email" id="email" name="email" placeholder="Enter your email" />#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <label for="password">Password</label>#}
+{#            <input type="password" id="password" name="password" placeholder="Enter your password" />#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <label for="confirm-password">Confirm Password</label>#}
+{#            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" />#}
+{#          </div>#}
+          <div class="btn-group">
+            <button type="submit" class="btn-primary">Register</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+          </div>
+        </form>
+      </section>
+{% endblock %}

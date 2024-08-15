@@ -19,12 +19,28 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.urls import path
 
+from core.forms import RegisterForm
+
 
 def index(request):
     return render(request, "index.html")
 
+def register(request):
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            return render(request, "register.html", {"form": form})
+    else:
+        form = RegisterForm()
+    return render(request, "register.html", {"form": form})
+
+def login(request):
+    return render(request, "login.html")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", index),
+    path("register/", register),
+
+    path("login/", login),
 ]
