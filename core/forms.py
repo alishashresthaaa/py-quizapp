@@ -7,37 +7,37 @@ from django import forms
 class LoginForm(forms.Form):
     username = forms.CharField(
         max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'Username'})
+        widget=forms.TextInput(attrs={'placeholder': 'Enter your username'})
     )
     password = forms.CharField(
         max_length=100,
-        widget=forms.PasswordInput(attrs={'placeholder': 'Password'})
+        widget=forms.PasswordInput(attrs={'placeholder': 'Enter your password'})
     )
 
 
 class RegisterForm(forms.Form):
     firstname = forms.CharField(
         max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'First Name'})
+        widget=forms.TextInput(attrs={'placeholder': 'Enter your First Name'})
     )
     lastname = forms.CharField(
         max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'Last Name'})
+        widget=forms.TextInput(attrs={'placeholder': 'Enter your Last Name'})
     )
     username = forms.CharField(
         max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'Username'})
+        widget=forms.TextInput(attrs={'placeholder': 'Enter your Username'})
     )
     email = forms.EmailField(
-        widget=forms.EmailInput(attrs={'placeholder': 'Email'})
+        widget=forms.EmailInput(attrs={'placeholder': 'Enter your Email'})
     )
     password = forms.CharField(
         max_length=100,
-        widget=forms.PasswordInput(attrs={'placeholder': 'Password'})
+        widget=forms.PasswordInput(attrs={'placeholder': 'Enter your Password'})
     )
     confirm_password = forms.CharField(
         max_length=100,
-        widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'})
+        widget=forms.PasswordInput(attrs={'placeholder': 'Enter your Confirm Password'})
     )
 
     def clean_firstname(self):
@@ -64,3 +64,18 @@ class RegisterForm(forms.Form):
         if password != confirm_password:
             raise forms.ValidationError("Passwords do not match.")
         return confirm_password
+
+
+CATEGORY_CHOICES = [
+    ('science', 'Science'),
+    ('math', 'Math'),
+    ('history', 'History'),
+    ('literature', 'Literature'),
+]
+
+
+class CategoryForm(forms.Form):
+    category = forms.ChoiceField(
+        choices=CATEGORY_CHOICES,
+        widget=forms.Select(attrs={'placeholder': 'Select Category'})
+    )
