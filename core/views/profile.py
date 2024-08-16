@@ -7,6 +7,9 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import UpdateView
 
+from core import forms
+from core.forms import EditProfileForm
+
 
 @method_decorator(login_required, name='dispatch')
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
@@ -24,8 +27,8 @@ class ProfileView(TemplateView):
 @method_decorator(require_http_methods(["GET", "POST"]), name="dispatch")
 class EditProfileView(LoginRequiredMixin, UpdateView):
     model = User
+    form_class = EditProfileForm
     template_name = 'edit_profile.html'
-    fields = ['first_name', 'last_name', 'email']
     success_url = reverse_lazy('profile')
 
     def get_object(self, queryset=None):

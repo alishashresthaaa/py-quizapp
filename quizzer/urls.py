@@ -42,5 +42,4 @@ urlpatterns = [
     path("", index),
     path("quiz/", include("core.urls")),
     path("profile/", profile),
-    path("scores/", scores),
 ]
