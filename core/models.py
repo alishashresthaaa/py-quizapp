@@ -50,17 +50,13 @@ class Quiz(BaseModel):
     def __str__(self):
         return self.name
 
-    def get_category_name(self):
+    def get_category(self):
         # Assuming all questions in a quiz belong to the same category
         if self.quizresponse_set.exists():
 
-            first_question = self.quizresponse_set.first().question
-            return (
-                first_question.category.name
-                if first_question
-                else "No Category"
-            )
-        return "No Category"
+            return self.quizresponse_set.first().question.category
+
+        return None
 
 
 class QuizResponse(BaseModel):
