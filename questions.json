@@ -348,5 +348,1055 @@
             {"answer_text": "Spanish", "is_correct": false},
             {"answer_text": "Portuguese", "is_correct": false}
         ]
-    }
+    },
+    {
+        "question_text": "Which desert is the largest in the world?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Sahara", "is_correct": true},
+            {"answer_text": "Gobi", "is_correct": false},
+            {"answer_text": "Kalahari", "is_correct": false},
+            {"answer_text": "Mojave", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which river is the longest in the world?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Nile", "is_correct": true},
+            {"answer_text": "Amazon", "is_correct": false},
+            {"answer_text": "Yangtze", "is_correct": false},
+            {"answer_text": "Mississippi", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Mount Everest is located in which mountain range?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Himalayas", "is_correct": true},
+            {"answer_text": "Andes", "is_correct": false},
+            {"answer_text": "Rockies", "is_correct": false},
+            {"answer_text": "Alps", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which country has the most islands?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Sweden", "is_correct": true},
+            {"answer_text": "Indonesia", "is_correct": false},
+            {"answer_text": "Philippines", "is_correct": false},
+            {"answer_text": "Greece", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the capital city of Australia?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Canberra", "is_correct": true},
+            {"answer_text": "Sydney", "is_correct": false},
+            {"answer_text": "Melbourne", "is_correct": false},
+            {"answer_text": "Brisbane", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which novel features the character 'Atticus Finch'?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "To Kill a Mockingbird", "is_correct": true},
+            {"answer_text": "Moby-Dick", "is_correct": false},
+            {"answer_text": "Pride and Prejudice", "is_correct": false},
+            {"answer_text": "1984", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Who wrote 'The Great Gatsby'?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "F. Scott Fitzgerald", "is_correct": true},
+            {"answer_text": "Ernest Hemingway", "is_correct": false},
+            {"answer_text": "Mark Twain", "is_correct": false},
+            {"answer_text": "John Steinbeck", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which book series was written by J.R.R. Tolkien?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "The Lord of the Rings", "is_correct": true},
+            {"answer_text": "Harry Potter", "is_correct": false},
+            {"answer_text": "The Chronicles of Narnia", "is_correct": false},
+            {"answer_text": "A Song of Ice and Fire", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the first book of the Bible?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "Genesis", "is_correct": true},
+            {"answer_text": "Exodus", "is_correct": false},
+            {"answer_text": "Leviticus", "is_correct": false},
+            {"answer_text": "Numbers", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which Greek author is credited with writing the 'Iliad' and the 'Odyssey'?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "Homer", "is_correct": true},
+            {"answer_text": "Sophocles", "is_correct": false},
+            {"answer_text": "Euripides", "is_correct": false},
+            {"answer_text": "Aristophanes", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the powerhouse of the cell?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Mitochondria", "is_correct": true},
+            {"answer_text": "Nucleus", "is_correct": false},
+            {"answer_text": "Ribosome", "is_correct": false},
+            {"answer_text": "Chloroplast", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which planet has the most moons?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Jupiter", "is_correct": true},
+            {"answer_text": "Saturn", "is_correct": false},
+            {"answer_text": "Uranus", "is_correct": false},
+            {"answer_text": "Neptune", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the freezing point of water in Fahrenheit?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "32°F", "is_correct": true},
+            {"answer_text": "0°F", "is_correct": false},
+            {"answer_text": "100°F", "is_correct": false},
+            {"answer_text": "212°F", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What organ in the human body is responsible for pumping blood?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Heart", "is_correct": true},
+            {"answer_text": "Lungs", "is_correct": false},
+            {"answer_text": "Kidneys", "is_correct": false},
+            {"answer_text": "Liver", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the main gas found in the Earth's atmosphere?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Nitrogen", "is_correct": true},
+            {"answer_text": "Oxygen", "is_correct": false},
+            {"answer_text": "Carbon Dioxide", "is_correct": false},
+            {"answer_text": "Hydrogen", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the chemical symbol for water?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "H2O", "is_correct": true},
+            {"answer_text": "O2", "is_correct": false},
+            {"answer_text": "CO2", "is_correct": false},
+            {"answer_text": "NaCl", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What element has the atomic number 6?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "Carbon", "is_correct": true},
+            {"answer_text": "Oxygen", "is_correct": false},
+            {"answer_text": "Nitrogen", "is_correct": false},
+            {"answer_text": "Helium", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which chemical element is represented by the symbol 'Na'?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "Sodium", "is_correct": true},
+            {"answer_text": "Nitrogen", "is_correct": false},
+            {"answer_text": "Neon", "is_correct": false},
+            {"answer_text": "Nickel", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the pH level of pure water?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "7", "is_correct": true},
+            {"answer_text": "1", "is_correct": false},
+            {"answer_text": "14", "is_correct": false},
+            {"answer_text": "10", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which element has the highest atomic number?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "Oganesson", "is_correct": true},
+            {"answer_text": "Uranium", "is_correct": false},
+            {"answer_text": "Plutonium", "is_correct": false},
+            {"answer_text": "Thorium", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Who was the first woman to fly solo across the Atlantic Ocean?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "Amelia Earhart", "is_correct": true},
+            {"answer_text": "Harriet Quimby", "is_correct": false},
+            {"answer_text": "Bessie Coleman", "is_correct": false},
+            {"answer_text": "Jacqueline Cochran", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Who was the first President of the United States?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "George Washington", "is_correct": true},
+            {"answer_text": "John Adams", "is_correct": false},
+            {"answer_text": "Thomas Jefferson", "is_correct": false},
+            {"answer_text": "James Madison", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What year did the Berlin Wall fall?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "1989", "is_correct": true},
+            {"answer_text": "1979", "is_correct": false},
+            {"answer_text": "1991", "is_correct": false},
+            {"answer_text": "1999", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which empire was ruled by Julius Caesar?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "Roman Empire", "is_correct": true},
+            {"answer_text": "Byzantine Empire", "is_correct": false},
+            {"answer_text": "Ottoman Empire", "is_correct": false},
+            {"answer_text": "Mongol Empire", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which country was the first to send a man to the moon?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "United States", "is_correct": true},
+            {"answer_text": "Soviet Union", "is_correct": false},
+            {"answer_text": "China", "is_correct": false},
+            {"answer_text": "France", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which country uses the currency 'Ringgit'?",
+        "category": "Finance",
+        "answers": [
+            {"answer_text": "Malaysia", "is_correct": true},
+            {"answer_text": "Indonesia", "is_correct": false},
+            {"answer_text": "Philippines", "is_correct": false},
+            {"answer_text": "Thailand", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the currency of South Africa?",
+        "category": "Finance",
+        "answers": [
+            {"answer_text": "Rand", "is_correct": true},
+            {"answer_text": "Pound", "is_correct": false},
+            {"answer_text": "Dollar", "is_correct": false},
+            {"answer_text": "Euro", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which currency is abbreviated as 'AUD'?",
+        "category": "Finance",
+        "answers": [
+            {"answer_text": "Australian Dollar", "is_correct": true},
+            {"answer_text": "Austrian Dollar", "is_correct": false},
+            {"answer_text": "American Dollar", "is_correct": false},
+            {"answer_text": "Argentinian Dollar", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which metal is often associated with being a safe investment?",
+        "category": "Finance",
+        "answers": [
+            {"answer_text": "Gold", "is_correct": true},
+            {"answer_text": "Silver", "is_correct": false},
+            {"answer_text": "Platinum", "is_correct": false},
+            {"answer_text": "Copper", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which country uses the currency 'Peso'?",
+        "category": "Finance",
+        "answers": [
+            {"answer_text": "Mexico", "is_correct": true},
+            {"answer_text": "Brazil", "is_correct": false},
+            {"answer_text": "Argentina", "is_correct": false},
+            {"answer_text": "Chile", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which language is primarily spoken in Brazil?",
+        "category": "Languages",
+        "answers": [
+            {"answer_text": "Portuguese", "is_correct": true},
+            {"answer_text": "Spanish", "is_correct": false},
+            {"answer_text": "English", "is_correct": false},
+            {"answer_text": "French", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the official language of Israel?",
+        "category": "Languages",
+        "answers": [
+            {"answer_text": "Hebrew", "is_correct": true},
+            {"answer_text": "Arabic", "is_correct": false},
+            {"answer_text": "English", "is_correct": false},
+            {"answer_text": "French", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which language is spoken in Iran?",
+        "category": "Languages",
+        "answers": [
+            {"answer_text": "Persian", "is_correct": true},
+            {"answer_text": "Arabic", "is_correct": false},
+            {"answer_text": "Turkish", "is_correct": false},
+            {"answer_text": "Urdu", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which language has the most native speakers worldwide?",
+        "category": "Languages",
+        "answers": [
+            {"answer_text": "Mandarin Chinese", "is_correct": true},
+            {"answer_text": "Spanish", "is_correct": false},
+            {"answer_text": "English", "is_correct": false},
+            {"answer_text": "Hindi", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which language is spoken in both Spain and Latin America?",
+        "category": "Languages",
+        "answers": [
+            {"answer_text": "Spanish", "is_correct": true},
+            {"answer_text": "Portuguese", "is_correct": false},
+            {"answer_text": "French", "is_correct": false},
+            {"answer_text": "Italian", "is_correct": false}
+        ]
+    },
+        {
+            "question_text": "Which desert is the largest in the world?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Sahara", "is_correct": true},
+                {"answer_text": "Gobi", "is_correct": false},
+                {"answer_text": "Kalahari", "is_correct": false},
+                {"answer_text": "Mojave", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which river is the longest in the world?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Nile", "is_correct": true},
+                {"answer_text": "Amazon", "is_correct": false},
+                {"answer_text": "Yangtze", "is_correct": false},
+                {"answer_text": "Mississippi", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Mount Everest is located in which mountain range?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Himalayas", "is_correct": true},
+                {"answer_text": "Andes", "is_correct": false},
+                {"answer_text": "Rockies", "is_correct": false},
+                {"answer_text": "Alps", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which country has the most islands?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Sweden", "is_correct": true},
+                {"answer_text": "Indonesia", "is_correct": false},
+                {"answer_text": "Philippines", "is_correct": false},
+                {"answer_text": "Greece", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the capital city of Australia?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Canberra", "is_correct": true},
+                {"answer_text": "Sydney", "is_correct": false},
+                {"answer_text": "Melbourne", "is_correct": false},
+                {"answer_text": "Brisbane", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which novel features the character 'Atticus Finch'?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "To Kill a Mockingbird", "is_correct": true},
+                {"answer_text": "Moby-Dick", "is_correct": false},
+                {"answer_text": "Pride and Prejudice", "is_correct": false},
+                {"answer_text": "1984", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Who wrote 'The Great Gatsby'?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "F. Scott Fitzgerald", "is_correct": true},
+                {"answer_text": "Ernest Hemingway", "is_correct": false},
+                {"answer_text": "Mark Twain", "is_correct": false},
+                {"answer_text": "John Steinbeck", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which book series was written by J.R.R. Tolkien?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "The Lord of the Rings", "is_correct": true},
+                {"answer_text": "Harry Potter", "is_correct": false},
+                {"answer_text": "The Chronicles of Narnia", "is_correct": false},
+                {"answer_text": "A Song of Ice and Fire", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the first book of the Bible?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "Genesis", "is_correct": true},
+                {"answer_text": "Exodus", "is_correct": false},
+                {"answer_text": "Leviticus", "is_correct": false},
+                {"answer_text": "Numbers", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which Greek author is credited with writing the 'Iliad' and the 'Odyssey'?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "Homer", "is_correct": true},
+                {"answer_text": "Sophocles", "is_correct": false},
+                {"answer_text": "Euripides", "is_correct": false},
+                {"answer_text": "Aristophanes", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the powerhouse of the cell?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "Mitochondria", "is_correct": true},
+                {"answer_text": "Nucleus", "is_correct": false},
+                {"answer_text": "Ribosome", "is_correct": false},
+                {"answer_text": "Chloroplast", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which planet has the most moons?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "Jupiter", "is_correct": true},
+                {"answer_text": "Saturn", "is_correct": false},
+                {"answer_text": "Uranus", "is_correct": false},
+                {"answer_text": "Neptune", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the freezing point of water in Fahrenheit?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "32°F", "is_correct": true},
+                {"answer_text": "0°F", "is_correct": false},
+                {"answer_text": "100°F", "is_correct": false},
+                {"answer_text": "212°F", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What organ in the human body is responsible for pumping blood?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "Heart", "is_correct": true},
+                {"answer_text": "Lungs", "is_correct": false},
+                {"answer_text": "Kidneys", "is_correct": false},
+                {"answer_text": "Liver", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the main gas found in the Earth's atmosphere?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "Nitrogen", "is_correct": true},
+                {"answer_text": "Oxygen", "is_correct": false},
+                {"answer_text": "Carbon Dioxide", "is_correct": false},
+                {"answer_text": "Hydrogen", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the chemical symbol for water?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "H2O", "is_correct": true},
+                {"answer_text": "O2", "is_correct": false},
+                {"answer_text": "CO2", "is_correct": false},
+                {"answer_text": "NaCl", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What element has the atomic number 6?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Carbon", "is_correct": true},
+                {"answer_text": "Oxygen", "is_correct": false},
+                {"answer_text": "Nitrogen", "is_correct": false},
+                {"answer_text": "Helium", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which chemical element is represented by the symbol 'Na'?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Sodium", "is_correct": true},
+                {"answer_text": "Nitrogen", "is_correct": false},
+                {"answer_text": "Neon", "is_correct": false},
+                {"answer_text": "Nickel", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the pH level of pure water?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "7", "is_correct": true},
+                {"answer_text": "1", "is_correct": false},
+                {"answer_text": "14", "is_correct": false},
+                {"answer_text": "10", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which element has the highest atomic number?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Oganesson", "is_correct": true},
+                {"answer_text": "Uranium", "is_correct": false},
+                {"answer_text": "Plutonium", "is_correct": false},
+                {"answer_text": "Thorium", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Who was the first woman to fly solo across the Atlantic Ocean?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "Amelia Earhart", "is_correct": true},
+                {"answer_text": "Harriet Quimby", "is_correct": false},
+                {"answer_text": "Bessie Coleman", "is_correct": false},
+                {"answer_text": "Jacqueline Cochran", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Who was the first President of the United States?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "George Washington", "is_correct": true},
+                {"answer_text": "John Adams", "is_correct": false},
+                {"answer_text": "Thomas Jefferson", "is_correct": false},
+                {"answer_text": "James Madison", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What year did the Berlin Wall fall?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "1989", "is_correct": true},
+                {"answer_text": "1979", "is_correct": false},
+                {"answer_text": "1991", "is_correct": false},
+                {"answer_text": "1999", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which empire was ruled by Julius Caesar?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "Roman Empire", "is_correct": true},
+                {"answer_text": "Byzantine Empire", "is_correct": false},
+                {"answer_text": "Ottoman Empire", "is_correct": false},
+                {"answer_text": "Mongol Empire", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which country was the first to send a man to the moon?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "United States", "is_correct": true},
+                {"answer_text": "Soviet Union", "is_correct": false},
+                {"answer_text": "China", "is_correct": false},
+                {"answer_text": "France", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which country uses the currency 'Ringgit'?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "Malaysia", "is_correct": true},
+                {"answer_text": "Indonesia", "is_correct": false},
+                {"answer_text": "Philippines", "is_correct": false},
+                {"answer_text": "Thailand", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the currency of South Africa?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "Rand", "is_correct": true},
+                {"answer_text": "Pound", "is_correct": false},
+                {"answer_text": "Dollar", "is_correct": false},
+                {"answer_text": "Euro", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which currency is abbreviated as 'AUD'?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "Australian Dollar", "is_correct": true},
+                {"answer_text": "Austrian Dollar", "is_correct": false},
+                {"answer_text": "American Dollar", "is_correct": false},
+                {"answer_text": "Argentinian Dollar", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which metal is often associated with being a safe investment?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "Gold", "is_correct": true},
+                {"answer_text": "Silver", "is_correct": false},
+                {"answer_text": "Platinum", "is_correct": false},
+                {"answer_text": "Copper", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which country uses the currency 'Peso'?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "Mexico", "is_correct": true},
+                {"answer_text": "Brazil", "is_correct": false},
+                {"answer_text": "Argentina", "is_correct": false},
+                {"answer_text": "Chile", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which language is primarily spoken in Brazil?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Portuguese", "is_correct": true},
+                {"answer_text": "Spanish", "is_correct": false},
+                {"answer_text": "English", "is_correct": false},
+                {"answer_text": "French", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the official language of Israel?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Hebrew", "is_correct": true},
+                {"answer_text": "Arabic", "is_correct": false},
+                {"answer_text": "English", "is_correct": false},
+                {"answer_text": "French", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which language is spoken in Iran?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Persian", "is_correct": true},
+                {"answer_text": "Arabic", "is_correct": false},
+                {"answer_text": "Turkish", "is_correct": false},
+                {"answer_text": "Urdu", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which language has the most native speakers worldwide?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Mandarin Chinese", "is_correct": true},
+                {"answer_text": "Spanish", "is_correct": false},
+                {"answer_text": "English", "is_correct": false},
+                {"answer_text": "Hindi", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which language is spoken in both Spain and Latin America?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Spanish", "is_correct": true},
+                {"answer_text": "Portuguese", "is_correct": false},
+                {"answer_text": "French", "is_correct": false},
+                {"answer_text": "Italian", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which country is the largest by land area?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Russia", "is_correct": true},
+                {"answer_text": "Canada", "is_correct": false},
+                {"answer_text": "China", "is_correct": false},
+                {"answer_text": "United States", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which river flows through the city of Paris?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Seine", "is_correct": true},
+                {"answer_text": "Thames", "is_correct": false},
+                {"answer_text": "Danube", "is_correct": false},
+                {"answer_text": "Rhine", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which continent is known as the 'Land Down Under'?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Australia", "is_correct": true},
+                {"answer_text": "South America", "is_correct": false},
+                {"answer_text": "Africa", "is_correct": false},
+                {"answer_text": "Asia", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which U.S. state is the Grand Canyon located in?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Arizona", "is_correct": true},
+                {"answer_text": "Nevada", "is_correct": false},
+                {"answer_text": "Colorado", "is_correct": false},
+                {"answer_text": "Utah", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which country shares the longest border with the United States?",
+            "category": "Geography",
+            "answers": [
+                {"answer_text": "Canada", "is_correct": true},
+                {"answer_text": "Mexico", "is_correct": false},
+                {"answer_text": "Russia", "is_correct": false},
+                {"answer_text": "Cuba", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Who wrote 'Pride and Prejudice'?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "Jane Austen", "is_correct": true},
+                {"answer_text": "Emily Brontë", "is_correct": false},
+                {"answer_text": "Charlotte Brontë", "is_correct": false},
+                {"answer_text": "Mary Shelley", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which novel begins with the line 'Call me Ishmael'?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "Moby-Dick", "is_correct": true},
+                {"answer_text": "The Old Man and the Sea", "is_correct": false},
+                {"answer_text": "The Catcher in the Rye", "is_correct": false},
+                {"answer_text": "The Grapes of Wrath", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which poet wrote 'The Raven'?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "Edgar Allan Poe", "is_correct": true},
+                {"answer_text": "Robert Frost", "is_correct": false},
+                {"answer_text": "Walt Whitman", "is_correct": false},
+                {"answer_text": "Emily Dickinson", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which famous novel was written by Mary Shelley?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "Frankenstein", "is_correct": true},
+                {"answer_text": "Dracula", "is_correct": false},
+                {"answer_text": "The Strange Case of Dr. Jekyll and Mr. Hyde", "is_correct": false},
+                {"answer_text": "The Picture of Dorian Gray", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which author created the detective Sherlock Holmes?",
+            "category": "Literature",
+            "answers": [
+                {"answer_text": "Arthur Conan Doyle", "is_correct": true},
+                {"answer_text": "Agatha Christie", "is_correct": false},
+                {"answer_text": "Raymond Chandler", "is_correct": false},
+                {"answer_text": "Dashiell Hammett", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the atomic number of hydrogen?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "1", "is_correct": true},
+                {"answer_text": "2", "is_correct": false},
+                {"answer_text": "3", "is_correct": false},
+                {"answer_text": "4", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the powerhouse of the cell?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "Mitochondria", "is_correct": true},
+                {"answer_text": "Nucleus", "is_correct": false},
+                {"answer_text": "Ribosome", "is_correct": false},
+                {"answer_text": "Golgi apparatus", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the chemical formula for table salt?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "NaCl", "is_correct": true},
+                {"answer_text": "KCl", "is_correct": false},
+                {"answer_text": "CaCl2", "is_correct": false},
+                {"answer_text": "Na2CO3", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which planet is closest to the sun?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "Mercury", "is_correct": true},
+                {"answer_text": "Venus", "is_correct": false},
+                {"answer_text": "Earth", "is_correct": false},
+                {"answer_text": "Mars", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which gas is most abundant in the Earth's atmosphere?",
+            "category": "Science",
+            "answers": [
+                {"answer_text": "Nitrogen", "is_correct": true},
+                {"answer_text": "Oxygen", "is_correct": false},
+                {"answer_text": "Carbon dioxide", "is_correct": false},
+                {"answer_text": "Hydrogen", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which element has the chemical symbol 'Fe'?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Iron", "is_correct": true},
+                {"answer_text": "Gold", "is_correct": false},
+                {"answer_text": "Silver", "is_correct": false},
+                {"answer_text": "Copper", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the lightest element on the periodic table?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Hydrogen", "is_correct": true},
+                {"answer_text": "Helium", "is_correct": false},
+                {"answer_text": "Lithium", "is_correct": false},
+                {"answer_text": "Beryllium", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which element has the highest melting point?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Tungsten", "is_correct": true},
+                {"answer_text": "Iron", "is_correct": false},
+                {"answer_text": "Gold", "is_correct": false},
+                {"answer_text": "Carbon", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which element is commonly used in batteries?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Lithium", "is_correct": true},
+                {"answer_text": "Copper", "is_correct": false},
+                {"answer_text": "Zinc", "is_correct": false},
+                {"answer_text": "Iron", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which gas is released during photosynthesis?",
+            "category": "Chemistry",
+            "answers": [
+                {"answer_text": "Oxygen", "is_correct": true},
+                {"answer_text": "Carbon dioxide", "is_correct": false},
+                {"answer_text": "Nitrogen", "is_correct": false},
+                {"answer_text": "Hydrogen", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Who was the first man to set foot on the moon?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "Neil Armstrong", "is_correct": true},
+                {"answer_text": "Buzz Aldrin", "is_correct": false},
+                {"answer_text": "Michael Collins", "is_correct": false},
+                {"answer_text": "Yuri Gagarin", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Who was the first Emperor of China?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "Qin Shi Huang", "is_correct": true},
+                {"answer_text": "Genghis Khan", "is_correct": false},
+                {"answer_text": "Kublai Khan", "is_correct": false},
+                {"answer_text": "Sun Tzu", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What was the name of the ship that brought the Pilgrims to America in 1620?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "Mayflower", "is_correct": true},
+                {"answer_text": "Santa Maria", "is_correct": false},
+                {"answer_text": "Pinta", "is_correct": false},
+                {"answer_text": "Nina", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Who was the first woman to win a Nobel Prize?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "Marie Curie", "is_correct": true},
+                {"answer_text": "Rosalind Franklin", "is_correct": false},
+                {"answer_text": "Jane Goodall", "is_correct": false},
+                {"answer_text": "Ada Lovelace", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which battle is considered the turning point of the American Civil War?",
+            "category": "History",
+            "answers": [
+                {"answer_text": "Battle of Gettysburg", "is_correct": true},
+                {"answer_text": "Battle of Antietam", "is_correct": false},
+                {"answer_text": "Battle of Bull Run", "is_correct": false},
+                {"answer_text": "Battle of Fort Sumter", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the primary function of the stock market?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "To facilitate the buying and selling of securities", "is_correct": true},
+                {"answer_text": "To regulate banking", "is_correct": false},
+                {"answer_text": "To issue currency", "is_correct": false},
+                {"answer_text": "To provide loans to businesses", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is a mutual fund?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "A pool of money collected from many investors to invest in securities", "is_correct": true},
+                {"answer_text": "A loan from a bank", "is_correct": false},
+                {"answer_text": "A type of bond", "is_correct": false},
+                {"answer_text": "A government savings account", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is inflation?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "The increase in the prices of goods and services over time", "is_correct": true},
+                {"answer_text": "The decrease in the value of currency", "is_correct": false},
+                {"answer_text": "A reduction in the supply of money", "is_correct": false},
+                {"answer_text": "The increase in interest rates", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What does GDP stand for?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "Gross Domestic Product", "is_correct": true},
+                {"answer_text": "Global Domestic Policy", "is_correct": false},
+                {"answer_text": "General Domestic Population", "is_correct": false},
+                {"answer_text": "Gross Debt Percentage", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the primary function of the International Monetary Fund (IMF)?",
+            "category": "Finance",
+            "answers": [
+                {"answer_text": "To ensure global monetary cooperation and financial stability", "is_correct": true},
+                {"answer_text": "To regulate trade between countries", "is_correct": false},
+                {"answer_text": "To provide development aid", "is_correct": false},
+                {"answer_text": "To manage the stock markets", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which language is spoken in Brazil?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Portuguese", "is_correct": true},
+                {"answer_text": "Spanish", "is_correct": false},
+                {"answer_text": "French", "is_correct": false},
+                {"answer_text": "English", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which language is spoken in Japan?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Japanese", "is_correct": true},
+                {"answer_text": "Korean", "is_correct": false},
+                {"answer_text": "Chinese", "is_correct": false},
+                {"answer_text": "Vietnamese", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "Which language has the most speakers worldwide?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Mandarin Chinese", "is_correct": true},
+                {"answer_text": "Spanish", "is_correct": false},
+                {"answer_text": "English", "is_correct": false},
+                {"answer_text": "Hindi", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the official language of Brazil?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Portuguese", "is_correct": true},
+                {"answer_text": "Spanish", "is_correct": false},
+                {"answer_text": "French", "is_correct": false},
+                {"answer_text": "English", "is_correct": false}
+            ]
+        },
+        {
+            "question_text": "What is the official language of Egypt?",
+            "category": "Languages",
+            "answers": [
+                {"answer_text": "Arabic", "is_correct": true},
+                {"answer_text": "English", "is_correct": false},
+                {"answer_text": "French", "is_correct": false},
+                {"answer_text": "Swahili", "is_correct": false}
+            ]
+        }        
 ]
