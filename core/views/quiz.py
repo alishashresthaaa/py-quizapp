@@ -144,7 +144,7 @@ class QuizResultsView(TemplateView):
 @method_decorator(login_required(login_url=LOGIN_URL), name="dispatch")
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
 class QuizHistoryView(TemplateView):
-    template_name = "history.html"
+    template_name = "scores.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -160,27 +160,17 @@ class QuizHistoryView(TemplateView):
         context["lowest_score"] = min([quiz.score for quiz in quizzes])
 
         # append quiz data
-        quizzes = {}
+        scores = []
         for quiz in quizzes:
-            quiz_data = {
-                "id": quiz.id,
+            score_data = {
                 "name": quiz.name,
+                "category": quiz.get_category_name(),
                 "score": quiz.score,
-                "date_created": quiz.date_created,
-                "category": quiz.category.name,
-                "responses": [],
+                "precentage": (quiz.score / 5) * 100,
+                "date_created": str(quiz.date_created),
             }
 
-            responses = QuizResponse.objects.filter(quiz=quiz)
-            for response in responses:
-                response_data = {
-                    "question": response.question.text,
-                    "answer": response.answer.text,
-                    "is_correct": response.is_correct,
-                }
-                quiz_data["responses"].append(response_data)
+            scores.append(score_data)
 
-            quizzes.append(quiz_data)
-
-        context["quizzes"] = quizzes
+        context["scores"] = scores
         return context
