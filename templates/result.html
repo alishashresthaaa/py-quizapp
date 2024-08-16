@@ -13,8 +13,18 @@
             <div class="result__description">You scored {{ result.score }} out of {{ result.total }}</div>
             <div class="result__description">Score Percentage: {{ result.percentage }}%</div>
             {% if result.percentage < 50 %}
-            <a class="result__link" href="#">Wanna Retry?</a>
+            <form id="quizForm" method="post" action="{% url 'start_quiz' %}">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="{{ result.category_id }}">
+                <a href="#" class="result__link" id="submitQuizForm">Wanna Retry?</a>
+            </form>
             {% endif %}
         </div>
    </section>
+   <script>
+        document.getElementById('submitQuizForm').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            document.getElementById('quizForm').submit(); // Submit the form
+        });
+    </script>
 {% endblock %}
