@@ -136,7 +136,7 @@ class QuizResultsView(TemplateView):
             "quiz_id": quiz_id,
             "category": category.name if category else "N/A",
             "category_id": category.id if category else "",
-            "percentage": percentage,
+            "percentage": round(percentage, 2),
             "message": get_quiz_response(percentage),
             "allow_retry": allow_retry,
         }
