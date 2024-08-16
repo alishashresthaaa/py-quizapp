@@ -7,10 +7,17 @@
         <h1 class="form__header">My Scoreboard</h1>
         <p class="form__subheader">Are you any close to the world domination?</p>
         <div class="score__container">
-            <div class="score__category">Category{{ score.category|default: "Category" }}</div>
-            <div class="score__description">Score Percentage: {{ result.percentage|default: 50 }}%</div>
-            <div class="score__header">You scored {{ result.score|default:2 }} out of {{ result.total|default:5 }}</div>
-            <div class="score__message">{{ result.message|default:"You suck." }}</div>
+         <table class="score__table">
+            <thead>
+               <tr>
+                  <th>Category</th>
+                  <th>Score</th>
+                  <th>Percentage</th>
+               </tr>
+            </thead>
+            <tbody>
+            </tbody>
+         </table>
         </div>
    </section>
 {% endblock %}
