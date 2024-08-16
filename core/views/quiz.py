@@ -167,12 +167,16 @@ class QuizHistoryView(TemplateView):
 
         for quiz in quizzes:
             category = quiz.get_category()
+            if not category:
+                continue
             score_data = {
                 "name": quiz.name,
                 "category": category.name if category else "N/A",
                 "score": quiz.score,
                 "percentage": (quiz.score / 5) * 100,
-                "date_created": str(quiz.date_created).split(" ")[0],
+                "date_created": quiz.date_modified.strftime(
+                    "%Y-%m-%d %H:%M:%S"
+                ),
             }
 
             scores.append(score_data)
