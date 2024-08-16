@@ -13,45 +13,56 @@ from core.models import Quiz
 from core.models import QuizResponse
 from core.utils import get_quiz_response
 
+# Add login required decorator
 
-@method_decorator(
-    login_required(login_url=reverse_lazy("login")), name="dispatch"
-)
+
+LOGIN_URL = reverse_lazy("login")
+
+
+# decorator to redirect to login page if user is not authenticated
+@method_decorator(login_required(login_url=LOGIN_URL), name="dispatch")
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
 class CategoriesView(TemplateView):
     template_name = "category.html"
 
     def get_context_data(self, **kwargs):
+        # add custom categoryform to context
         context = super().get_context_data(**kwargs)
         context["form"] = CategoryForm()
         return context
 
 
-@method_decorator(
-    login_required(login_url=reverse_lazy("login")), name="dispatch"
-)
+@method_decorator(login_required(login_url=LOGIN_URL), name="dispatch")
 @method_decorator(require_http_methods(["POST"]), name="dispatch")
 class StartQuizView(TemplateView):
+    """View to start a quiz"""
+
     template_name = "quiz.html"
 
     def post(self, request):
 
+        # validate category form
         category = CategoryForm(request.POST)
         if not category.is_valid():
             return HttpResponse("Invalid category", status=400)
 
+        # get random questions from selected category
         category = category.cleaned_data["category"]
         questions = category.question_set.all()
         questions = random.sample(list(questions), min(5, len(questions)))
 
+        # create quiz object
         quiz = Quiz.objects.create(
             user=request.user, name=f"{request.user}#{category}"
         )
+
+        # create quiz response object
         data = {
             "id": quiz.id,
             "category": category.name,
             "questions": [],
         }
+        # loop through the selected questions and answers
         for question in questions:
             question_data = {
                 "text": question.question_text,
@@ -68,20 +79,23 @@ class StartQuizView(TemplateView):
         return self.render_to_response({"quiz": data})
 
 
-@method_decorator(
-    login_required(login_url=reverse_lazy("login")), name="dispatch"
-)
+@method_decorator(login_required(login_url=LOGIN_URL), name="dispatch")
 @method_decorator(require_http_methods(["POST"]), name="dispatch")
 class QuizResultsView(TemplateView):
+    """View to calculate and display quiz results"""
+
     template_name = "results.html"
 
     def post(self, request, quiz_id):
         data = self.request.POST
+
+        # get quiz object
         try:
             quiz = Quiz.objects.get(pk=quiz_id)
         except Quiz.DoesNotExist:
             return HttpResponse("Quiz not found", status=404)
 
+        # calculate score and save quiz response
         score = 0
         total = 0
         for question_id, answer_id in data.items():
@@ -121,9 +135,7 @@ class QuizResultsView(TemplateView):
         return self.render_to_response({"result": result})
 
 
-@method_decorator(
-    login_required(login_url=reverse_lazy("login")), name="dispatch"
-)
+@method_decorator(login_required(login_url=LOGIN_URL), name="dispatch")
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
 class QuizHistoryView(TemplateView):
     template_name = "history.html"

@@ -15,6 +15,8 @@ from core.forms import RegisterForm
 
 
 class LoginView(TemplateView):
+    """View for user login"""
+
     template_name = "login.html"
 
     def get_context_data(self, **kwargs):
@@ -42,12 +44,16 @@ class LoginView(TemplateView):
 
 
 class LogoutView(View):
+    """View for user login"""
+
     def get(self, request):
         logout(request)
         return redirect("login")
 
 
 class RegisterView(TemplateView):
+    """View to register user"""
+
     template_name = "register.html"
 
     def get_context_data(self, **kwargs):

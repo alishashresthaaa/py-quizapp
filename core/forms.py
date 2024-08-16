@@ -7,6 +7,8 @@ from core.models import Category
 
 
 class LoginForm(forms.Form):
+    """Form for user login"""
+
     username = forms.CharField(
         max_length=100,
         widget=forms.TextInput(attrs={"placeholder": "Enter your username"}),
@@ -20,6 +22,8 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
+    """Form for registering a new user"""
+
     firstname = forms.CharField(
         max_length=100,
         widget=forms.TextInput(attrs={"placeholder": "Enter your First Name"}),
@@ -79,6 +83,8 @@ class RegisterForm(forms.Form):
 
 
 class CategoryForm(forms.Form):
+    """Form for selecting a category"""
+
     category = forms.ModelChoiceField(
         queryset=Category.objects.all(),
         widget=forms.Select(attrs={"placeholder": "Select Category"}),
