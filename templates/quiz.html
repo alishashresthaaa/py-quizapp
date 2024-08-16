@@ -3,25 +3,26 @@
 {% block title %}Category{% endblock %}
 
 {% block content %}
-   <section class="form__container">
-        <h1 class="form__header">Quiz</h1>
-        <p class="form__subheader">Focus on the questions please!</p>
-        <form action="#" method="post">
-          {% csrf_token %}
-          {% for field in form %}
-          <div class="form-group{% if field.errors %} form-group-error{% endif %}">
-            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-            {{ field }}
-            {% if field.errors %}
-            <div class="form-error">
-                {{ field.errors }}
-            </div>
-            {% endif %}
-          </div>
-          {% endfor %}
-          <div class="btn-group">
-            <button type="submit" class="btn-primary">Start Quiz</button>
-          </div>
-        </form>
-   </section>
+<section class="form__container">
+  <h1 class="form__header">Quiz</h1>
+  <p class="form__subheader">Focus on the questions please!</p>
+  {{ quiz}}
+  <form action="#" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form-group{% if field.errors %} form-group-error{% endif %}">
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}
+      {% if field.errors %}
+      <div class="form-error">
+        {{ field.errors }}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+    <div class="btn-group">
+      <button type="submit" class="btn-primary">Start Quiz</button>
+    </div>
+  </form>
+</section>
 {% endblock %}
