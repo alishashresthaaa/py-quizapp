@@ -157,6 +157,14 @@ class QuizHistoryView(TemplateView):
         quizzes = Quiz.objects.filter(user=user).order_by("-date_created")
 
         # calculate average, highest, and lowest scores
+
+        if not quizzes:
+            context["average_score"] = 0
+            context["highest_score"] = 0
+            context["lowest_score"] = 0
+            context["scores"] = []
+            return context
+
         average_score = sum([quiz.score for quiz in quizzes]) / len(quizzes)
         context["average_score"] = f"{average_score:.2f}"
         context["highest_score"] = max([quiz.score for quiz in quizzes])
