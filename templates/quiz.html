@@ -4,24 +4,91 @@
 
 {% block content %}
    <section class="form__container">
-        <h1 class="form__header">Quiz</h1>
+       <h1 class="form__header">Quiz</h1>
         <p class="form__subheader">Focus on the questions please!</p>
-        <form action="#" method="post">
-          {% csrf_token %}
-          {% for field in form %}
-          <div class="form-group{% if field.errors %} form-group-error{% endif %}">
-            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-            {{ field }}
-            {% if field.errors %}
-            <div class="form-error">
-                {{ field.errors }}
+        <div class="question__container">
+            <div class="question__number">Question 1 of 5</div>
+            <div class="question__text">This is the question, This is the question, This is the question</div>
+            <div class="question__number">Select your answer:</div>
+            <div class="question__options">
+                <div class="option__container">
+                    <input type="radio" name="option" id="option1" value="option1">
+                    <label for="option1">Option 1</label>
+                </div>
+                <div class="option__container">
+                    <input type="radio" name="option" id="option2" value="option2">
+                    <label for="option2">Option 2</label>
+                </div>
+                <div class="option__container">
+                    <input type="radio" name="option" id="option2" value="option2">
+                    <label for="option2">Option 2</label>
+                </div>
             </div>
-            {% endif %}
-          </div>
-          {% endfor %}
-          <div class="btn-group">
-            <button type="submit" class="btn-primary">Start Quiz</button>
-          </div>
-        </form>
+            <button type="submit" class="btn-primary">Next &#x2192</button>
+        </div>
    </section>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const questions = [
+      {
+        text: "This is question 1",
+        options: ["Option 1.1", "Option 1.2", "Option 1.3"]
+      },
+      {
+        text: "This is question 2",
+        options: ["Option 2.1", "Option 2.2", "Option 2.3"]
+      },
+      {
+        text: "This is question 3",
+        options: ["Option 3.1", "Option 3.2", "Option 3.3"]
+      },
+      {
+        text: "This is question 4",
+        options: ["Option 4.1", "Option 4.2", "Option 4.3"]
+      },
+      {
+        text: "This is question 5",
+        options: ["Option 5.1", "Option 5.2", "Option 5.3"]
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function populateQuestion() {
+      const question = questions[currentQuestionIndex];
+      document.querySelector('.question__text').textContent = question.text;
+      document.querySelector('.question__number').textContent = `Question ${currentQuestionIndex + 1} of 5`;
+
+      const optionsContainer = document.querySelector('.question__options');
+      optionsContainer.innerHTML = '';
+      question.options.forEach((option, index) => {
+        const optionContainer = document.createElement('div');
+        optionContainer.className = 'option__container';
+        optionContainer.innerHTML = `
+          <input type="radio" name="option" id="option${index}" value="option${index}">
+          <label for="option${index}">${option}</label>
+        `;
+        optionsContainer.appendChild(optionContainer);
+      });
+
+      const nextButton = document.querySelector('.btn-primary');
+      if (currentQuestionIndex === questions.length - 1) {
+        nextButton.textContent = 'Show Result';
+      } else {
+        nextButton.textContent = 'Next →';
+      }
+    }
+
+    document.querySelector('.btn-primary').addEventListener('click', function() {
+      if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        populateQuestion();
+      } else {
+        document.querySelector('.form__container').innerHTML = '<p>Dummy data: You have completed the quiz!</p>';
+      }
+    });
+
+    populateQuestion();
+  });
+</script>
 {% endblock %}

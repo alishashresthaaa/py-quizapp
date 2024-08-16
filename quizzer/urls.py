@@ -64,6 +64,9 @@ def scores(request):
     return render(request, "scores.html")
 
 
+def quiz(request):
+    return render(request, "quiz.html")
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", index),
@@ -72,4 +75,5 @@ urlpatterns = [
     path("category/", category),
     path("profile/", profile),
     path("scores/", scores),
+    path("quiz/", quiz),
 ]

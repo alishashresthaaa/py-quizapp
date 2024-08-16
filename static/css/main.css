@@ -94,7 +94,10 @@ label {
   margin-bottom: 5px;
 }
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
 textarea,
 select {
   font-family: var(--font-family);
@@ -106,7 +109,10 @@ select {
   border-radius: var(--border-radius);
 }
 
-input::placeholder,
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="number"]::placeholder,
 textarea::placeholder,
 select option {
   font-family: var(--font-family);
@@ -115,7 +121,7 @@ select option {
 
 .form__container {
   width: 600px;
-  margin: 30px auto 0;
+  margin: auto;
   @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0 20px;
@@ -133,7 +139,7 @@ select option {
 .form__container p {
   font-size: 18px;
   color: var(--color-dark);
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -150,4 +156,64 @@ select option {
   font-size: 16px;
   margin-top: 4px;
   font-weight: 500;
+}
+
+.question__container{
+  padding: 30px;
+  border: 2px solid var(--color-primary-main);
+  border-radius: var(--border-radius);
+}
+
+.question__number{
+  font-size: 18px;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.question__text{
+  font-size: 18px;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+  max-width: 530px;
+  word-wrap: break-word;
+}
+
+.question__options{
+  display: flex;
+  flex-direction: column;
+}
+
+.option__container{
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+input[type="radio"]{
+  transform: scale(1.5);
+  cursor: pointer;
+  border-color: transparent;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--color-primary-main);
+  border-radius: 50%;
+  width: 12px;
+  height:12px;
+  position: relative;
+}
+
+input[type="radio"]:checked::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-primary-main);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
