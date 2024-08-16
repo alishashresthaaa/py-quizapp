@@ -1,21 +1,20 @@
 from django.urls import path
 
-from . import views
+from core.views import auth
+from core.views import quiz
 
 urlpatterns = [
-    path("login/", views.LoginView.as_view(), name="login"),
-    path("logout/", views.LogoutView.as_view(), name="logout"),
-    path("register/", views.RegisterView.as_view(), name="register"),
-    path("categories/", views.CategoriesView.as_view(), name="categories"),
-    path(
-        "start/",
-        views.StartQuizView.as_view(),
-        name="start_quiz",
-    ),
+    # auth views
+    path("login/", auth.LoginView.as_view(), name="login"),
+    path("logout/", auth.LogoutView.as_view(), name="logout"),
+    path("register/", auth.RegisterView.as_view(), name="register"),
+    # quiz views
+    path("categories/", quiz.CategoriesView.as_view(), name="categories"),
+    path("start/", quiz.StartQuizView.as_view(), name="start_quiz"),
     path(
         "submit/<int:quiz_id>/",
-        views.QuizResultsView.as_view(),
+        quiz.QuizResultsView.as_view(),
         name="quiz_results",
     ),
-    path("history/", views.QuizHistoryView.as_view(), name="quiz_history"),
+    path("history/", quiz.QuizHistoryView.as_view(), name="quiz_history"),
 ]
