@@ -170,6 +170,9 @@ class QuizHistoryView(TemplateView):
             if not category:
                 continue
             answer_count = quiz.quizresponse_set.count()
+            if answer_count == 0:
+                continue
+
             score_data = {
                 "name": quiz.name,
                 "category": category.name if category else "N/A",
