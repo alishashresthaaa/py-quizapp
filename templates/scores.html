@@ -3,7 +3,7 @@
 {% block title %}Profile{% endblock %}
 
 {% block content %}
-   <section class="form__container">
+   <section>
         <h1 class="form__header">My Scoreboard</h1>
         <p class="form__subheader">Are you any close to the world domination?</p>
         <div class="score__container">
@@ -14,17 +14,19 @@
                   <th>Category</th>
                   <th>Score</th>
                   <th>Percentage</th>
-                  <th>View Details</th>
+                  <th>Given Date</th>
+{#                  <th>View Details</th>#}
                </tr>
             </thead>
             <tbody>
                 {% for score in scores %}
                 <tr>
-                    <td>{{ loop.index }}</td>
+                    <td>{{ forloop.counter }}</td>
                     <td>{{ score.category }}</td>
                     <td>{{ score.score }}</td>
                     <td>{{ score.percentage }}%</td>
-                    <td><a href="/scores/{{ score.id }}">View</a></td>
+                    <td>{{ score.date_created}}</td>
+{#                    <td><a href="/scores/{{ score.id }}">View Details</a></td>#}
                 </tr>
                 {% endfor %}
             </tbody>

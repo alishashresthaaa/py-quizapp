@@ -166,8 +166,8 @@ class QuizHistoryView(TemplateView):
                 "name": quiz.name,
                 "category": quiz.get_category_name(),
                 "score": quiz.score,
-                "precentage": (quiz.score / 5) * 100,
-                "date_created": str(quiz.date_created),
+                "percentage": (quiz.score / 5) * 100,
+                "date_created": str(quiz.date_created).split(" ")[0],
             }
 
             scores.append(score_data)
