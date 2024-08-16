@@ -134,7 +134,7 @@ class QuizResultsView(TemplateView):
             "score": score,
             "total": total,
             "quiz_id": quiz_id,
-            "category": category.name if category else "",
+            "category": category.name if category else "N/A",
             "category_id": category.id if category else "",
             "percentage": percentage,
             "message": get_quiz_response(score),
@@ -164,10 +164,12 @@ class QuizHistoryView(TemplateView):
 
         # append quiz data
         scores = []
+
         for quiz in quizzes:
+            category = quiz.get_category()
             score_data = {
                 "name": quiz.name,
-                "category": quiz.get_category(),
+                "category": category.name if category else "N/A",
                 "score": quiz.score,
                 "percentage": (quiz.score / 5) * 100,
                 "date_created": str(quiz.date_created).split(" ")[0],

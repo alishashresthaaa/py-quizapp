@@ -53,9 +53,7 @@ class Quiz(BaseModel):
     def get_category(self):
         # Assuming all questions in a quiz belong to the same category
         if self.quizresponse_set.exists():
-
             return self.quizresponse_set.first().question.category
-
         return None
 
 
