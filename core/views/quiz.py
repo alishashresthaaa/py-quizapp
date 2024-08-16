@@ -155,7 +155,7 @@ class QuizHistoryView(TemplateView):
 
         # calculate average, highest, and lowest scores
         average_score = sum([quiz.score for quiz in quizzes]) / len(quizzes)
-        context["average_score"] = average_score
+        context["average_score"] = f"{average_score:.2f}"
         context["highest_score"] = max([quiz.score for quiz in quizzes])
         context["lowest_score"] = min([quiz.score for quiz in quizzes])
 

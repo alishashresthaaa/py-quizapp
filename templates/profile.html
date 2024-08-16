@@ -3,11 +3,12 @@
 {% block title %}Profile{% endblock %}
 
 {% block content %}
-    <section class="form__container">
-        <h1 class="form__header">Name: {{ user.first_name }} {{ user.last_name }}</h1>
+    <section class="form__container" style="text-align: center">
+        <h1 class="form__header">Your Profile</h1>
         <br/>
+        <p class="form__subheader">Name: {{ user.first_name }} {{ user.last_name }}</p>
         <p class="form__subheader">Username: {{ user.username }}</p>
         <p class="form__subheader">Email: {{ user.email }}</p>
-        <a href="{% url 'edit_profile' %}" class="btn-primary" style="">Edit Profile</a>
+        <a href="{% url 'edit_profile' %}" class="btn-primary" style="display:inline-block;margin-top: 10px">Edit Profile</a>
     </section>
 {% endblock %}
