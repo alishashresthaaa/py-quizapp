@@ -15,9 +15,24 @@
       <span>Brainiac - An Intelligence Meter</span>
       <nav>
         <ul>
+          {% if True %}
+           <li>
+            <a href="/category">Category</a>
+          </li>
+          <li>
+            <a href="/scores">My Scoreboard</a>
+          </li>
+          <li>
+            <a href="/profile">My Profile</a>
+          </li>
+          <li>
+            <a>Logout</a>
+          </li>
+          {% else %}
           <li>
             <a href="/register">Register</a>
           </li>
+          {% endif %}
         </ul>
       </nav>
     </header>

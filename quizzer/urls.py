@@ -19,11 +19,12 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.urls import path
 
-from core.forms import RegisterForm, LoginForm
+from core.forms import RegisterForm, LoginForm, CategoryForm
 
 
 def index(request):
     return render(request, "index.html")
+
 
 def register(request):
     if request.method == "POST":
@@ -34,6 +35,7 @@ def register(request):
         form = RegisterForm()
     return render(request, "register.html", {"form": form})
 
+
 def login(request):
     if request.method == "POST":
         form = LoginForm(request.POST)
@@ -43,10 +45,31 @@ def login(request):
         form = LoginForm()
     return render(request, "login.html", {"form": form})
 
+
+def category(request):
+    if request.method == "POST":
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            return render(request, "category.html", {"form": form})
+    else:
+        form = CategoryForm()
+    return render(request, "category.html", {"form": form})
+
+
+def profile(request):
+    return render(request, "profile.html")
+
+
+def scores(request):
+    return render(request, "scores.html")
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", index),
     path("register/", register),
-
     path("login/", login),
+    path("category/", category),
+    path("profile/", profile),
+    path("scores/", scores),
 ]

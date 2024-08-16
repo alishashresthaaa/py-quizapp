@@ -46,7 +46,6 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 24px;
-  gap: 30px;
 }
 
 .header__logo {
@@ -59,9 +58,9 @@ body {
     flex: 100px;
 }
 
-.header__nav ul {
+.header ul {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .btn-primary {
