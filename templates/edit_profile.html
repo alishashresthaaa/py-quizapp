@@ -1,0 +1,15 @@
+<!-- templates/edit_profile.html -->
+{% extends "header.html" %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+    <section class="form__container">
+        <h1 class="form__header">Edit Profile</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn-primary">Save Changes</button>
+        </form>
+    </section>
+{% endblock %}

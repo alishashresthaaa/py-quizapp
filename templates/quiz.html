@@ -2,29 +2,32 @@
 
 {% block title %}Quiz{% endblock %}
 
-{% block content %}
-   <section class="form__container">
-        <h1 class="form__header">Quiz for {{ quiz.category }}</h1>
-        <p class="form__subheader">Focus on the questions please!</p>
-        <div class="question__container">
-            <div class="question__number">Question 1 of {{ quiz.questions|length }}</div>
-            <div class="question__text">{{ quiz.questions.0.text }}</div>
-            <div class="question__number">Select your answer:</div>
-            <div class="question__options">
-                {% for answer in quiz.questions.0.answers %}
-                    <div class="option__container">
-                        <input type="radio" name="option" id="option_{{ answer.id }}" value="{{ answer.id }}">
-                        <label for="option_{{ answer.id }}">{{ answer.text }}</label>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="form-error" style="display: none;">Dont be a coward. Select an option!</div>
-            <button type="submit" class="btn-primary">Next &#x2192;</button>
-        </div>
-   </section>
-    <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const quizData = {{ quiz|safe }};
+{% block content %}<h1 class="form__header">Quiz for {{ quiz.category }}</h1>
+<p class="form__subheader">Focus on the questions please!</p>
+<div class="question__container">
+  <div class="question__number">Question 1 of {{ quiz.questions|length }}</div>
+  <div class="question__text">{{ quiz.questions.0.text }}</div>
+  <div class="question__number">Select your answer:</div>
+  <div class="question__options">
+    {% for answer in quiz.questions.0.answers %}
+    <div class="option__container">
+      <input type="radio" name="option" id="option_{{ answer.id }}" value="{{ answer.id }}">
+      <label for="option_{{ answer.id }}">{{ answer.text }}</label>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="form-error" style="display: none;">Dont be a coward. Select an option!</div>
+  <button type="submit" class="btn-primary">Next &#x2192;</button>
+</div>
+</section>
+<form id="quiz-form" method="post" action="{% url 'quiz_results' quiz.id %}" style="display: none;">
+  <input type="hidden" name="quiz_id" value="{{ quiz.id }}">
+  {% csrf_token %}
+  <input type="hidden" name="selected_answers" id="selected-answers">
+</form>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const quizData = {{ quiz | safe }};
     let currentQuestionIndex = 0;
     const selectedAnswers = [];
 
@@ -53,7 +56,7 @@
       }
     }
 
-    document.querySelector('.btn-primary').addEventListener('click', function() {
+    document.querySelector('.btn-primary').addEventListener('click', function () {
       const selectedOption = document.querySelector('input[name="option"]:checked');
       const errorMessage = document.querySelector('.form-error');
 
@@ -70,7 +73,8 @@
           currentQuestionIndex++;
           populateQuestion();
         } else {
-         console.log(selectedAnswers, quizData.category)
+          document.getElementById('selected-answers').value = JSON.stringify(selectedAnswers);
+          document.getElementById('quiz-form').submit();
         }
       }
     });

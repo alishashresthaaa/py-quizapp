@@ -1,3 +1,4 @@
+import json
 import random
 
 from django.contrib.auth.decorators import login_required
@@ -85,7 +86,7 @@ class StartQuizView(TemplateView):
 class QuizResultsView(TemplateView):
     """View to calculate and display quiz results"""
 
-    template_name = "results.html"
+    template_name = "result.html"
 
     def post(self, request, quiz_id):
         data = self.request.POST
@@ -99,7 +100,11 @@ class QuizResultsView(TemplateView):
         # calculate score and save quiz response
         score = 0
         total = 0
-        for question_id, answer_id in data.items():
+
+        selected_answers = json.loads(data["selected_answers"])
+        for question_answer in selected_answers:
+            answer_id = question_answer["option_id"]
+            question_id = question_answer["question_id"]
             try:
                 answer = Answer.objects.get(pk=answer_id)
             except Answer.DoesNotExist:
@@ -127,7 +132,7 @@ class QuizResultsView(TemplateView):
             "score": score,
             "total": total,
             "quiz_id": quiz_id,
-            "category": quiz.category.name,
+            "category": quiz.get_category_name(),
             "percentage": percentage,
             "message": get_quiz_response(score),
             "allow_retry": allow_retry,
@@ -178,34 +183,4 @@ class QuizHistoryView(TemplateView):
             quizzes.append(quiz_data)
 
         context["quizzes"] = quizzes
-        return context
-
-
-class QuizResultView(TemplateView):
-    template_name = "result.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['result'] = {
-            'category': 'Science',
-            'percentage': 75,
-            'score': 3,
-            'total': 4,
-            'message': 'Good job!'
-        }
-        return context
-
-
-class QuizScoresView(TemplateView):
-    template_name = "scores.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['scores'] = [
-            {'category': 'Science', 'score': 5, 'percentage': 100},
-            {'category': 'Math', 'score': 4, 'percentage': 80},
-            {'category': 'History', 'score': 2, 'percentage': 50},
-            {'category': 'English', 'score': 1, 'percentage': 25},
-            {'category': 'Geography', 'score': 0, 'percentage':0}
-        ]
         return context
