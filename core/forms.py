@@ -2,6 +2,7 @@
 import re
 
 from django import forms
+from django.contrib.auth.models import User
 
 from core.models import Category
 
@@ -97,3 +98,27 @@ class CategoryForm(forms.Form):
         first_question = self.fields["category"].queryset.first()
         if first_question:
             self.fields["category"].initial = first_question
+
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email']
+
+    def clean_first_name(self):
+        first_name = self.cleaned_data.get('first_name')
+        if not first_name:
+            raise forms.ValidationError("First name cannot be empty.")
+        return first_name
+
+    def clean_last_name(self):
+        last_name = self.cleaned_data.get('last_name')
+        if not last_name:
+            raise forms.ValidationError("Last name cannot be empty.")
+        return last_name
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if not email:
+            raise forms.ValidationError("Email cannot be empty.")
+        return email
