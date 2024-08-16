@@ -25,7 +25,7 @@ LOGIN_URL = reverse_lazy("login")
 @method_decorator(login_required(login_url=LOGIN_URL), name="dispatch")
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
 class CategoriesView(TemplateView):
-    template_name = "category.html"
+    template_name = "index.html"
 
     def get_context_data(self, **kwargs):
         # add custom categoryform to context

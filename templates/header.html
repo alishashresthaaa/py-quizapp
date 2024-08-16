@@ -19,13 +19,13 @@
       <ul>
         {% if True %}
         <li>
-          <a href="{% url 'categories' %}">Category</a>
+          <a href="{% url 'categories' %}">Start a quiz!</a>
         </li>
         <li>
-          <a href="{% url 'scores' %}">My Scoreboard</a>
+          <a href="{% url 'scores' %}">Scoreboard</a>
         </li>
         <li>
-          <a href="/profile">My Profile</a>
+          <a href="{% url 'profile' %}">Profile</a>
         </li>
         <li>
           <a href="{% url 'logout' %}">Logout</a>
