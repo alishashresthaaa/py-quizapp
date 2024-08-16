@@ -1,0 +1,312 @@
+[
+    {
+        "question_text": "What is the capital of France?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Paris", "is_correct": true},
+            {"answer_text": "London", "is_correct": false},
+            {"answer_text": "Berlin", "is_correct": false},
+            {"answer_text": "Rome", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which planet is known as the Red Planet?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Mars", "is_correct": true},
+            {"answer_text": "Venus", "is_correct": false},
+            {"answer_text": "Jupiter", "is_correct": false},
+            {"answer_text": "Saturn", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Who wrote 'To Kill a Mockingbird'?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "Harper Lee", "is_correct": true},
+            {"answer_text": "Mark Twain", "is_correct": false},
+            {"answer_text": "Ernest Hemingway", "is_correct": false},
+            {"answer_text": "F. Scott Fitzgerald", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the hardest natural substance on Earth?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Diamond", "is_correct": true},
+            {"answer_text": "Gold", "is_correct": false},
+            {"answer_text": "Iron", "is_correct": false},
+            {"answer_text": "Platinum", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the chemical symbol for gold?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "Au", "is_correct": true},
+            {"answer_text": "Ag", "is_correct": false},
+            {"answer_text": "Pb", "is_correct": false},
+            {"answer_text": "Fe", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which country is known as the Land of the Rising Sun?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Japan", "is_correct": true},
+            {"answer_text": "China", "is_correct": false},
+            {"answer_text": "South Korea", "is_correct": false},
+            {"answer_text": "Thailand", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the largest ocean on Earth?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Pacific Ocean", "is_correct": true},
+            {"answer_text": "Atlantic Ocean", "is_correct": false},
+            {"answer_text": "Indian Ocean", "is_correct": false},
+            {"answer_text": "Arctic Ocean", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Who painted the Mona Lisa?",
+        "category": "Art",
+        "answers": [
+            {"answer_text": "Leonardo da Vinci", "is_correct": true},
+            {"answer_text": "Vincent van Gogh", "is_correct": false},
+            {"answer_text": "Pablo Picasso", "is_correct": false},
+            {"answer_text": "Claude Monet", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the smallest prime number?",
+        "category": "Mathematics",
+        "answers": [
+            {"answer_text": "2", "is_correct": true},
+            {"answer_text": "1", "is_correct": false},
+            {"answer_text": "3", "is_correct": false},
+            {"answer_text": "5", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "In which city is the Eiffel Tower located?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Paris", "is_correct": true},
+            {"answer_text": "London", "is_correct": false},
+            {"answer_text": "New York", "is_correct": false},
+            {"answer_text": "Rome", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the main ingredient in guacamole?",
+        "category": "Food",
+        "answers": [
+            {"answer_text": "Avocado", "is_correct": true},
+            {"answer_text": "Tomato", "is_correct": false},
+            {"answer_text": "Onion", "is_correct": false},
+            {"answer_text": "Pepper", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which element has the atomic number 1?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "Hydrogen", "is_correct": true},
+            {"answer_text": "Helium", "is_correct": false},
+            {"answer_text": "Lithium", "is_correct": false},
+            {"answer_text": "Oxygen", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the capital of Canada?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Ottawa", "is_correct": true},
+            {"answer_text": "Toronto", "is_correct": false},
+            {"answer_text": "Vancouver", "is_correct": false},
+            {"answer_text": "Montreal", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which gas do plants primarily use for photosynthesis?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Carbon Dioxide", "is_correct": true},
+            {"answer_text": "Oxygen", "is_correct": false},
+            {"answer_text": "Nitrogen", "is_correct": false},
+            {"answer_text": "Hydrogen", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which planet is closest to the Sun?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Mercury", "is_correct": true},
+            {"answer_text": "Venus", "is_correct": false},
+            {"answer_text": "Earth", "is_correct": false},
+            {"answer_text": "Mars", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Who is the author of the Harry Potter series?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "J.K. Rowling", "is_correct": true},
+            {"answer_text": "J.R.R. Tolkien", "is_correct": false},
+            {"answer_text": "George R.R. Martin", "is_correct": false},
+            {"answer_text": "C.S. Lewis", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the largest planet in our solar system?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Jupiter", "is_correct": true},
+            {"answer_text": "Saturn", "is_correct": false},
+            {"answer_text": "Uranus", "is_correct": false},
+            {"answer_text": "Neptune", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the chemical formula for table salt?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "NaCl", "is_correct": true},
+            {"answer_text": "H2O", "is_correct": false},
+            {"answer_text": "CO2", "is_correct": false},
+            {"answer_text": "CH4", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What year did the Titanic sink?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "1912", "is_correct": true},
+            {"answer_text": "1905", "is_correct": false},
+            {"answer_text": "1920", "is_correct": false},
+            {"answer_text": "1935", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Who was the first President of the United States?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "George Washington", "is_correct": true},
+            {"answer_text": "Thomas Jefferson", "is_correct": false},
+            {"answer_text": "Abraham Lincoln", "is_correct": false},
+            {"answer_text": "John Adams", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which ocean is located on the east coast of the United States?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Atlantic Ocean", "is_correct": true},
+            {"answer_text": "Pacific Ocean", "is_correct": false},
+            {"answer_text": "Indian Ocean", "is_correct": false},
+            {"answer_text": "Arctic Ocean", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the capital of Australia?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Canberra", "is_correct": true},
+            {"answer_text": "Sydney", "is_correct": false},
+            {"answer_text": "Melbourne", "is_correct": false},
+            {"answer_text": "Brisbane", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the main language spoken in Brazil?",
+        "category": "Languages",
+        "answers": [
+            {"answer_text": "Portuguese", "is_correct": true},
+            {"answer_text": "Spanish", "is_correct": false},
+            {"answer_text": "English", "is_correct": false},
+            {"answer_text": "French", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which famous scientist developed the theory of relativity?",
+        "category": "Science",
+        "answers": [
+            {"answer_text": "Albert Einstein", "is_correct": true},
+            {"answer_text": "Isaac Newton", "is_correct": false},
+            {"answer_text": "Galileo Galilei", "is_correct": false},
+            {"answer_text": "Nikola Tesla", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the currency of Japan?",
+        "category": "Finance",
+        "answers": [
+            {"answer_text": "Yen", "is_correct": true},
+            {"answer_text": "Won", "is_correct": false},
+            {"answer_text": "Dollar", "is_correct": false},
+            {"answer_text": "Euro", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which Shakespeare play features the characters Romeo and Juliet?",
+        "category": "Literature",
+        "answers": [
+            {"answer_text": "Romeo and Juliet", "is_correct": true},
+            {"answer_text": "Hamlet", "is_correct": false},
+            {"answer_text": "Macbeth", "is_correct": false},
+            {"answer_text": "Othello", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the chemical symbol for silver?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "Ag", "is_correct": true},
+            {"answer_text": "Au", "is_correct": false},
+            {"answer_text": "Pb", "is_correct": false},
+            {"answer_text": "Fe", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "In which country would you find the ancient city of Petra?",
+        "category": "History",
+        "answers": [
+            {"answer_text": "Jordan", "is_correct": true},
+            {"answer_text": "Egypt", "is_correct": false},
+            {"answer_text": "Greece", "is_correct": false},
+            {"answer_text": "Turkey", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which element is represented by the symbol 'O'?",
+        "category": "Chemistry",
+        "answers": [
+            {"answer_text": "Oxygen", "is_correct": true},
+            {"answer_text": "Osmium", "is_correct": false},
+            {"answer_text": "Opium", "is_correct": false},
+            {"answer_text": "Oganesson", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "What is the smallest continent by land area?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Australia", "is_correct": true},
+            {"answer_text": "Europe", "is_correct": false},
+            {"answer_text": "Africa", "is_correct": false},
+            {"answer_text": "Antarctica", "is_correct": false}
+        ]
+    },
+    {
+        "question_text": "Which famous American landmark is located in New York Harbor?",
+        "category": "Geography",
+        "answers": [
+            {"answer_text": "Statue of Liberty", "is_correct": true},
+            {"answer_text": "Empire State Building", "is_correct": false},
+            {"answer_text": "Brooklyn Bridge", "is_correct": false},
+            {"answer_text": "One World Trade Center", "is_correct": false}
+        ]
+    }
+]

@@ -30,7 +30,9 @@ class Question(BaseModel):
 
 
 class Answer(BaseModel):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(
+        Question, on_delete=models.CASCADE, related_name="answers"
+    )
     answer_text = models.CharField(max_length=200)
     is_correct = models.BooleanField(default=False)
 

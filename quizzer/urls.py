@@ -17,9 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.shortcuts import render
+from django.urls import include
 from django.urls import path
 
-from core.forms import RegisterForm, LoginForm, CategoryForm
+from core.forms import CategoryForm
+from core.forms import LoginForm
+from core.forms import RegisterForm
 
 
 def index(request):
@@ -64,9 +67,6 @@ def scores(request):
     return render(request, "scores.html")
 
 
-def quiz(request):
-    return render(request, "quiz.html")
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", index),
@@ -75,5 +75,5 @@ urlpatterns = [
     path("category/", category),
     path("profile/", profile),
     path("scores/", scores),
-    path("quiz/", quiz),
+    path("quiz/", include("core.urls")),
 ]
