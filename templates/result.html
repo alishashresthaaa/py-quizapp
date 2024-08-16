@@ -18,6 +18,8 @@
                 <input type="hidden" name="category" value="{{ result.category_id }}">
                 <a href="#" class="result__link" id="submitQuizForm">Wanna Retry?</a>
             </form>
+            {% else %}
+            <a href="{% url 'categories' %}" class="result__link">Select another category!</a>
             {% endif %}
         </div>
    </section>
