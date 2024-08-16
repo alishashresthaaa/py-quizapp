@@ -303,3 +303,7 @@ input[type="radio"]:checked::before {
     margin-top: 20px;
     text-decoration: underline;
 }
+
+.btn-group p{
+  font-size: 18px;
+}
