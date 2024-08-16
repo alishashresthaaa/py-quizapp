@@ -12,6 +12,9 @@
             <div class="result__description">{{ result.message.text }}</div>
             <div class="result__description">You scored {{ result.score }} out of {{ result.total }}</div>
             <div class="result__description">Score Percentage: {{ result.percentage }}%</div>
+            {% if result.percentage < 50 %}
+            <a class="result__link" href="#">Wanna Retry?</a>
+            {% endif %}
         </div>
    </section>
 {% endblock %}
