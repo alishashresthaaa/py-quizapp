@@ -1,27 +1,75 @@
 {% extends "header.html" %}
 
-{% block title %}Category{% endblock %}
+{% block title %}Quiz{% endblock %}
 
 {% block content %}
    <section class="form__container">
-        <h1 class="form__header">Quiz</h1>
+        <h1 class="form__header">Quiz for {{ quiz.category }}</h1>
         <p class="form__subheader">Focus on the questions please!</p>
-        <form action="#" method="post">
-          {% csrf_token %}
-          {% for field in form %}
-          <div class="form-group{% if field.errors %} form-group-error{% endif %}">
-            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-            {{ field }}
-            {% if field.errors %}
-            <div class="form-error">
-                {{ field.errors }}
+        <div class="question__container">
+            <div class="question__number">Question 1 of {{ quiz.questions|length }}</div>
+            <div class="question__text">{{ quiz.questions.0.text }}</div>
+            <div class="question__number">Select your answer:</div>
+            <div class="question__options">
+                {% for answer in quiz.questions.0.answers %}
+                    <div class="option__container">
+                        <input type="radio" name="option" id="option_{{ answer.id }}" value="{{ answer.id }}">
+                        <label for="option_{{ answer.id }}">{{ answer.text }}</label>
+                    </div>
+                {% endfor %}
             </div>
-            {% endif %}
-          </div>
-          {% endfor %}
-          <div class="btn-group">
-            <button type="submit" class="btn-primary">Start Quiz</button>
-          </div>
-        </form>
+            <button type="submit" class="btn-primary">Next &#x2192;</button>
+        </div>
    </section>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const quizData = {{ quiz|safe }};
+    let currentQuestionIndex = 0;
+    const selectedAnswers = [];
+
+    function populateQuestion() {
+      const question = quizData.questions[currentQuestionIndex];
+      document.querySelector('.question__text').textContent = question.text;
+      document.querySelector('.question__number').textContent = `Question ${currentQuestionIndex + 1} of ${quizData.questions.length}`;
+
+      const optionsContainer = document.querySelector('.question__options');
+      optionsContainer.innerHTML = '';
+      question.answers.forEach((answer) => {
+        const optionContainer = document.createElement('div');
+        optionContainer.className = 'option__container';
+        optionContainer.innerHTML = `
+          <input type="radio" name="option" id="option${answer.id}" value="${answer.id}">
+          <label for="option${answer.id}">${answer.text}</label>
+        `;
+        optionsContainer.appendChild(optionContainer);
+      });
+
+      const nextButton = document.querySelector('.btn-primary');
+      if (currentQuestionIndex === quizData.questions.length - 1) {
+        nextButton.textContent = 'Show Result';
+      } else {
+        nextButton.textContent = 'Next →';
+      }
+    }
+
+    document.querySelector('.btn-primary').addEventListener('click', function() {
+      const selectedOption = document.querySelector('input[name="option"]:checked');
+      if (selectedOption) {
+        selectedAnswers.push({
+          question_id: quizData.questions[currentQuestionIndex].id,
+          option_id: selectedOption.value
+        });
+      }
+
+      if (currentQuestionIndex < quizData.questions.length - 1) {
+        currentQuestionIndex++;
+        populateQuestion();
+      } else {
+          console.log(selectedAnswers, quizData.id);
+      }
+    });
+
+    populateQuestion();
+  });
+</script>
 {% endblock %}

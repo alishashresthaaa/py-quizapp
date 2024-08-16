@@ -139,7 +139,7 @@ select option {
 .form__container p {
   font-size: 18px;
   color: var(--color-dark);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -190,6 +190,10 @@ select option {
   gap: 20px;
   justify-content: flex-start;
   margin-bottom: 20px;
+}
+
+.option__container label{
+  cursor: pointer;
 }
 
 input[type="radio"]{
