@@ -37,3 +37,10 @@ Apply migrations:
 ```
 python manage.py migrate
 ```
+
+
+## Loading questions 
+
+```
+python manage.py load_questions <questions_json>
+```
