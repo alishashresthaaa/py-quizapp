@@ -229,3 +229,35 @@ input[type="radio"]:checked::before {
 .question__container .form-error{
   margin-bottom: 20px;
 }
+
+.result__container{
+  margin-top: 40px;
+  text-align: center;
+  padding: 30px;
+  border: 2px solid var(--color-primary-main);
+  border-radius: var(--border-radius);
+}
+
+.result__header{
+  font-size: 36px;
+  margin: 10px auto;
+}
+
+.result__description{
+  font-size: 18px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.result__category{
+  font-size: 20px;
+  color: var(--color-primary-dark);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.result__message{
+  font-size: 18px;
+  color: var(--color-dark);
+}
