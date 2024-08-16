@@ -18,6 +18,7 @@
                     </div>
                 {% endfor %}
             </div>
+            <div class="form-error" style="display: none;">Dont be a coward. Select an option!</div>
             <button type="submit" class="btn-primary">Next &#x2192;</button>
         </div>
    </section>
@@ -54,18 +55,23 @@
 
     document.querySelector('.btn-primary').addEventListener('click', function() {
       const selectedOption = document.querySelector('input[name="option"]:checked');
-      if (selectedOption) {
+      const errorMessage = document.querySelector('.form-error');
+
+      if (!selectedOption) {
+        errorMessage.style.display = 'block';
+      } else {
+        errorMessage.style.display = 'none';
         selectedAnswers.push({
           question_id: quizData.questions[currentQuestionIndex].id,
           option_id: selectedOption.value
         });
-      }
 
-      if (currentQuestionIndex < quizData.questions.length - 1) {
-        currentQuestionIndex++;
-        populateQuestion();
-      } else {
-          console.log(selectedAnswers, quizData.id);
+        if (currentQuestionIndex < quizData.questions.length - 1) {
+          currentQuestionIndex++;
+          populateQuestion();
+        } else {
+         console.log(selectedAnswers, quizData.category)
+        }
       }
     });
 
