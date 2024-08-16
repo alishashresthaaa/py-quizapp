@@ -6,6 +6,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.http import require_http_methods
 from django.views.generic import TemplateView
 
+from core.forms import CategoryForm
 from core.models import Answer
 from core.models import Category
 from core.models import Quiz
@@ -16,11 +17,11 @@ from core.utils import get_quiz_response
 @method_decorator(login_required, name="dispatch")
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
 class CategoriesView(TemplateView):
-    template_name = "categories.html"
+    template_name = "category.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["categories"] = Category.objects.all()
+        context["form"] = CategoryForm()
         return context
 
 
@@ -29,9 +30,9 @@ class CategoriesView(TemplateView):
 class StartQuizView(TemplateView):
     template_name = "quiz.html"
 
-    def post(self, request, category_id):
+    def post(self, request):
 
-        category_id = self.kwargs["category_id"]
+        category_id = request.POST["category"]
         category = Category.objects.get(pk=category_id)
         questions = category.question_set.all()
         questions = random.sample(list(questions), min(5, len(questions)))

@@ -18,7 +18,7 @@ class Category(BaseModel):
     name = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"{self.pk}#{self.name}"
+        return self.name
 
 
 class Question(BaseModel):

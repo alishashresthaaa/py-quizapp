@@ -5,7 +5,7 @@ from . import views
 urlpatterns = [
     path("categories/", views.CategoriesView.as_view(), name="categories"),
     path(
-        "start/<int:category_id>/",
+        "start/",
         views.StartQuizView.as_view(),
         name="start_quiz",
     ),

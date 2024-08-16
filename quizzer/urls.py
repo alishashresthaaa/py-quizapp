@@ -17,9 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.shortcuts import render
+from django.urls import include
 from django.urls import path
 
-from core.forms import RegisterForm, LoginForm, CategoryForm
+from core.forms import CategoryForm
+from core.forms import LoginForm
+from core.forms import RegisterForm
 
 
 def index(request):
@@ -72,4 +75,5 @@ urlpatterns = [
     path("category/", category),
     path("profile/", profile),
     path("scores/", scores),
+    path("quiz/", include("core.urls")),
 ]
