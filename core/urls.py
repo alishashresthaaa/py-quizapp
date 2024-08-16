@@ -17,5 +17,4 @@ urlpatterns = [
         name="quiz_results",
     ),
     path("history/", quiz.QuizHistoryView.as_view(), name="quiz_history"),
-    path("result/", quiz.QuizResultView.as_view(), name="result"),
 ]

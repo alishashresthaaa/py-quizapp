@@ -184,19 +184,3 @@ class QuizHistoryView(TemplateView):
 
         context["quizzes"] = quizzes
         return context
-
-
-class QuizResultView(TemplateView):
-    template_name = "result.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # Example context data, replace with actual data retrieval logic
-        context["score"] = {"category": "Science"}
-        context["result"] = {
-            "percentage": 75,
-            "score": 3,
-            "total": 4,
-            "message": "Good job!",
-        }
-        return context
