@@ -16,30 +16,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.shortcuts import render
 from django.urls import include
 from django.urls import path
 
-from core.forms import CategoryForm
-from core.forms import LoginForm
-from core.forms import RegisterForm
-
-
-def index(request):
-    return render(request, "index.html")
-
-
-def profile(request):
-    return render(request, "profile.html")
-
-
-def scores(request):
-    return render(request, "scores.html")
-
-
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", index),
-    path("quiz/", include("core.urls")),
-    path("profile/", profile),
+    path("", include("core.urls")),
 ]
