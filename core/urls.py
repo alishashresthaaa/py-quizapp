@@ -18,4 +18,5 @@ urlpatterns = [
     ),
     path("history/", quiz.QuizHistoryView.as_view(), name="quiz_history"),
     path("result/", quiz.QuizResultView.as_view(), name="result"),
+    path("scores/", quiz.QuizScoresView.as_view(), name="quiz_scores"),
 ]

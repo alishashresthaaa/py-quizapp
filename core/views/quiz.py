@@ -194,3 +194,18 @@ class QuizResultView(TemplateView):
             'message': 'Good job!'
         }
         return context
+
+
+class QuizScoresView(TemplateView):
+    template_name = "scores.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['scores'] = [
+            {'category': 'Science', 'score': 5, 'percentage': 100},
+            {'category': 'Math', 'score': 4, 'percentage': 80},
+            {'category': 'History', 'score': 2, 'percentage': 50},
+            {'category': 'English', 'score': 1, 'percentage': 25},
+            {'category': 'Geography', 'score': 0, 'percentage':0}
+        ]
+        return context

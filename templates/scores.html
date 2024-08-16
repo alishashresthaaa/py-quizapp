@@ -10,12 +10,23 @@
          <table class="score__table">
             <thead>
                <tr>
+                  <th>SN</th>
                   <th>Category</th>
                   <th>Score</th>
                   <th>Percentage</th>
+                  <th>View Details</th>
                </tr>
             </thead>
             <tbody>
+                {% for score in scores %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ score.category }}</td>
+                    <td>{{ score.score }}</td>
+                    <td>{{ score.percentage }}%</td>
+                    <td><a href="/scores/{{ score.id }}">View</a></td>
+                </tr>
+                {% endfor %}
             </tbody>
          </table>
         </div>
