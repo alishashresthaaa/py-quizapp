@@ -7,6 +7,7 @@ from .models import Question
 from .models import Quiz
 from .models import QuizResponse
 
+# register the models
 admin.site.register(Question)
 admin.site.register(Answer)
 admin.site.register(Quiz)
