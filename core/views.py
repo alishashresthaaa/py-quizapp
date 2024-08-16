@@ -3,11 +3,15 @@ import random
 from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.http.response import HttpResponse as HttpResponse
 from django.shortcuts import redirect
+from django.urls import path
 from django.urls import reverse
+from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
+from django.views import View
 from django.views.decorators.http import require_http_methods
 from django.views.generic import TemplateView
 
@@ -48,6 +52,12 @@ class LoginView(TemplateView):
         return self.render_to_response({"form": form})
 
 
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        return redirect("login")
+
+
 class RegisterView(TemplateView):
     template_name = "register.html"
 
@@ -70,7 +80,9 @@ class RegisterView(TemplateView):
         return self.render_to_response({"form": form})
 
 
-@method_decorator(login_required, name="dispatch")
+@method_decorator(
+    login_required(login_url=reverse_lazy("login")), name="dispatch"
+)
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
 class CategoriesView(TemplateView):
     template_name = "category.html"
@@ -81,7 +93,9 @@ class CategoriesView(TemplateView):
         return context
 
 
-@method_decorator(login_required, name="dispatch")
+@method_decorator(
+    login_required(login_url=reverse_lazy("login")), name="dispatch"
+)
 @method_decorator(require_http_methods(["POST"]), name="dispatch")
 class StartQuizView(TemplateView):
     template_name = "quiz.html"
@@ -120,7 +134,9 @@ class StartQuizView(TemplateView):
         return self.render_to_response({"quiz": data})
 
 
-@method_decorator(login_required, name="dispatch")
+@method_decorator(
+    login_required(login_url=reverse_lazy("login")), name="dispatch"
+)
 @method_decorator(require_http_methods(["POST"]), name="dispatch")
 class QuizResultsView(TemplateView):
     template_name = "results.html"
@@ -171,7 +187,9 @@ class QuizResultsView(TemplateView):
         return self.render_to_response({"result": result})
 
 
-@method_decorator(login_required, name="dispatch")
+@method_decorator(
+    login_required(login_url=reverse_lazy("login")), name="dispatch"
+)
 @method_decorator(require_http_methods(["GET"]), name="dispatch")
 class QuizHistoryView(TemplateView):
     template_name = "history.html"
