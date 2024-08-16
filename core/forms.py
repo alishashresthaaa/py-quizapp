@@ -71,7 +71,7 @@ class RegisterForm(forms.Form):
         password = self.cleaned_data.get("password")
         if not re.search(r"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$", password):
             raise forms.ValidationError(
-                "Password must be combination of letters and numbers."
+                "Password must be combination of letters and numbers and at least 8 characters."
             )
         return password
 
