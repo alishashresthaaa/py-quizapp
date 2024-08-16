@@ -18,7 +18,7 @@
     <span>Brainiac - An Intelligence Meter</span>
     <nav>
       <ul>
-        {% if True %}
+        {% if user.is_authenticated %}
         <li>
           <a href="{% url 'categories' %}">Start a quiz!</a>
         </li>
