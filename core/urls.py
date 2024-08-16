@@ -2,6 +2,7 @@ from django.urls import path
 
 from core.views import auth
 from core.views import quiz
+from core.views import profile
 
 urlpatterns = [
     # auth views
@@ -17,4 +18,6 @@ urlpatterns = [
         name="quiz_results",
     ),
     path("history/", quiz.QuizHistoryView.as_view(), name="quiz_history"),
+    path("profile/", profile.ProfileView.as_view(), name="profile"),
+    path('edit-profile/', profile.EditProfileView.as_view(), name='edit_profile'),
 ]
